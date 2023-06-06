@@ -1,0 +1,18 @@
+nav {
+  display: flex;
+  position: absolute;
+  width: 550px;
+  height: 65px;
+  left: 0px;
+  top: 0px;
+  background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+}
+
+.logo {
+  width: 70px;
+}
+
+h2 {
+  color: white;
+  margin-left: 20px;
+}

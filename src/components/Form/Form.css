@@ -1,0 +1,28 @@
+input {
+  height: 35px;
+  width: 250px;
+  margin: 40px 40px 20px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  width: 477px;
+  height: 40px;
+  left: 36px;
+  top: 151px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+}
+
+.meme-img {
+  width: 600px;
+  height: 350px;
+  object-fit: cover;
+  margin-top: 40px;
+}

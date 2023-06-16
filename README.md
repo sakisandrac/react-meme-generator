@@ -1,4 +1,4 @@
-# Airbnb Comp - static page
+# Meme Generator
 This application allows users to create their own memes, by generating random meme images and allowing users to type text onto the images.
 
 ## Technologies Used

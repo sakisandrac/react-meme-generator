@@ -1,6 +1,5 @@
 import React from 'react';
 import './Form.css'
-import data from '../data/data'
 
 const Form = () => {
   const [meme, setMeme] = React.useState({
@@ -9,12 +8,17 @@ const Form = () => {
     randomImage: "http://i.imgflip.com/1bij.jpg" 
   })
 
-  const [allMemeImages, setAllMemeImages] = React.useState(data)
+  const [allMemeImages, setAllMemeImages] = React.useState({});
 
-  function getMemeImage() {
-    const memesArray = allMemeImages.data.memes
-    const randomNumber = Math.floor(Math.random() * memesArray.length)
-    const url = memesArray[randomNumber].url
+  React.useEffect(() => {
+    fetch('https://api.imgflip.com/get_memes')
+    .then(res => res.json())
+    .then(data => setAllMemeImages(data.data.memes))
+  }, []);
+
+  const getMemeImage = () => {
+    const randomNumber = Math.floor(Math.random() * allMemeImages.length)
+    const url = allMemeImages[randomNumber].url
     setMeme(prevMeme => ({
         ...prevMeme,
         randomImage: url
